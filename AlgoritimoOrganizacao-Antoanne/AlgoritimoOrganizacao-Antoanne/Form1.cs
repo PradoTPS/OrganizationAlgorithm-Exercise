@@ -27,6 +27,7 @@ namespace AlgoritimoOrganizacao_Antoanne
             Console.WriteLine(test.Count);
             alg.BubbleSort(test);
             Console.WriteLine(alg.Elapsed);
+            Console.WriteLine(alg.ListToString(test));
         }
     }
 }

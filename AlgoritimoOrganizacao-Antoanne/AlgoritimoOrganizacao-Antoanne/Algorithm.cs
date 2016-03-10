@@ -62,6 +62,17 @@ namespace AlgoritimoOrganizacao_Antoanne
             stopwatch.Stop();
             elapsed = stopwatch.ElapsedMilliseconds;
         }
+
+        public string ListToString(List<int> l)
+        {
+            string listElements = "";
+            foreach (int number in l)
+            {
+                listElements += number.ToString() + ", ";
+            }
+
+            return listElements;
+        }
         #endregion
 
     }
