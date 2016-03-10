@@ -20,14 +20,7 @@ namespace AlgoritimoOrganizacao_Antoanne
         private void button1_Click(object sender, EventArgs e)
         {
             Algorithm alg = new Algorithm();
-            List<int> test = new List<int>();
-            Console.WriteLine(test.Count);
-            alg.AddRandomElements(2000, 0, 50, test);
-            alg.AddRandomElements(51, 0, 50, test);
-            Console.WriteLine(test.Count);
-            alg.BubbleSort(test);
-            Console.WriteLine(alg.Elapsed);
-            Console.WriteLine(alg.ListToString(test));
+            alg.AntoanneTask();
         }
     }
 }

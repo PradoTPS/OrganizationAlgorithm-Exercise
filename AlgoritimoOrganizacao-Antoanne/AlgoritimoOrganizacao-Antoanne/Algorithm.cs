@@ -10,28 +10,13 @@ namespace AlgoritimoOrganizacao_Antoanne
     class Algorithm
     {
         #region Properties
-        List<int> nbrs = new List<int>();
         Random random = new Random();
         Stopwatch stopwatch = new Stopwatch();
         private long elapsed;
         #endregion
 
-        #region Get/Set
-        public long Elapsed
-        {
-            get
-            {
-                return elapsed;
-            }
-            set
-            {
-                elapsed = value;
-            }
-        }
-        #endregion
-
         #region Methods
-        public void AddRandomElements(int q, int min, int max, List<int> l)
+        private void AddRandomElements(int q, int min, int max, List<int> l)
         {
             int count = 0;
             while(count != q)
@@ -41,7 +26,7 @@ namespace AlgoritimoOrganizacao_Antoanne
             }
         }
 
-        public void BubbleSort(List<int> l)
+        private void BubbleSort(List<int> l)
         {
             stopwatch.Start();
             int temp = 0;
@@ -63,15 +48,48 @@ namespace AlgoritimoOrganizacao_Antoanne
             elapsed = stopwatch.ElapsedMilliseconds;
         }
 
-        public string ListToString(List<int> l)
+        private string ToString(List<int> l)
         {
-            string listElements = "";
+            string Elements = "";
             foreach (int number in l)
             {
-                listElements += number.ToString() + ", ";
+                Elements += number.ToString() + ", ";
             }
 
-            return listElements;
+            return Elements;
+        }
+
+        private string ToString(List<long> l)
+        {
+            string Elements = "";
+            foreach (long number in l)
+            {
+                Elements += number.ToString() + ", ";
+            }
+
+            return Elements;
+        }
+        #endregion
+
+        #region Antoanne Task
+        public void AntoanneTask()
+        {
+            List<int> nbrs = new List<int>();
+            List<long> elapseds = new List<long>();
+
+            AddRandomElements(10, 0, 500, nbrs);
+            BubbleSort(nbrs);
+            elapseds.Add(elapsed);
+
+            while(nbrs.Count != 2000)
+            {
+                AddRandomElements(5, 0, 500, nbrs);
+                BubbleSort(nbrs);
+                elapseds.Add(elapsed);
+            }
+
+            Console.WriteLine("Elementos da lista: " + ToString(nbrs));
+            Console.WriteLine("Tempo em milisegundos de cada ordenação: " + ToString(elapseds));
         }
         #endregion
 
