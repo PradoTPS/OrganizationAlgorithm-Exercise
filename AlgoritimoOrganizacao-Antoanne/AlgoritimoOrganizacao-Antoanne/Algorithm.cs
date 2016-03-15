@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace AlgoritimoOrganizacao_Antoanne
 {
@@ -80,7 +81,7 @@ namespace AlgoritimoOrganizacao_Antoanne
             AddRandomElements(10, 0, 500, nbrs);
             BubbleSort(nbrs);
             elapseds.Add(elapsed);
-
+            
             while(nbrs.Count != 2000)
             {
                 AddRandomElements(5, 0, 500, nbrs);
