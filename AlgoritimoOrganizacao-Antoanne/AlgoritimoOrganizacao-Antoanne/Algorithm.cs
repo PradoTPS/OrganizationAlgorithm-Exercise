@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace AlgoritimoOrganizacao_Antoanne
@@ -73,12 +74,12 @@ namespace AlgoritimoOrganizacao_Antoanne
         #endregion
 
         #region Antoanne Task
-        public void AntoanneTask()
+        public void AntoanneTask(Chart chr)
         {
             List<int> nbrs = new List<int>();
             List<long> elapseds = new List<long>();
 
-            AddRandomElements(10, 0, 500, nbrs);
+            AddRandomElements(5, 0, 500, nbrs);
             BubbleSort(nbrs);
             elapseds.Add(elapsed);
             
@@ -87,12 +88,13 @@ namespace AlgoritimoOrganizacao_Antoanne
                 AddRandomElements(5, 0, 500, nbrs);
                 BubbleSort(nbrs);
                 elapseds.Add(elapsed);
+                chr.Series["BubbleSort"].Points.AddXY(nbrs.Count, elapsed);
+                chr.Update();
             }
 
             Console.WriteLine("Elementos da lista: " + ToString(nbrs));
             Console.WriteLine("Tempo em milisegundos de cada ordenação: " + ToString(elapseds));
         }
         #endregion
-
     }
 }

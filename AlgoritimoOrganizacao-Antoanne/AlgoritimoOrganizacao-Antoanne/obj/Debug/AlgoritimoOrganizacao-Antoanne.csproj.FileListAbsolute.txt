@@ -8,3 +8,11 @@ C:\Users\Thiago\Documents\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrgani
 C:\Users\Thiago\Documents\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\obj\Debug\AlgoritimoOrganizacao-Antoanne.csproj.GenerateResource.Cache
 C:\Users\Thiago\Documents\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\obj\Debug\AlgoritimoOrganizacao-Antoanne.exe
 C:\Users\Thiago\Documents\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\obj\Debug\AlgoritimoOrganizacao-Antoanne.pdb
+C:\Users\Thiago.Prado\Desktop\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\obj\Debug\AlgoritimoOrganizacao-Antoanne.exe
+C:\Users\Thiago.Prado\Desktop\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\obj\Debug\AlgoritimoOrganizacao-Antoanne.pdb
+C:\Users\Thiago.Prado\Desktop\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\bin\Debug\AlgoritimoOrganizacao-Antoanne.exe
+C:\Users\Thiago.Prado\Desktop\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\bin\Debug\AlgoritimoOrganizacao-Antoanne.pdb
+C:\Users\Thiago.Prado\Desktop\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\obj\Debug\AlgoritimoOrganizacao-Antoanne.csprojResolveAssemblyReference.cache
+C:\Users\Thiago.Prado\Desktop\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\obj\Debug\AlgoritimoOrganizacao_Antoanne.Form1.resources
+C:\Users\Thiago.Prado\Desktop\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\obj\Debug\AlgoritimoOrganizacao_Antoanne.Properties.Resources.resources
+C:\Users\Thiago.Prado\Desktop\GitHub\OrganizationAlgorithm-Exercise\AlgoritimoOrganizacao-Antoanne\AlgoritimoOrganizacao-Antoanne\obj\Debug\AlgoritimoOrganizacao-Antoanne.csproj.GenerateResource.Cache

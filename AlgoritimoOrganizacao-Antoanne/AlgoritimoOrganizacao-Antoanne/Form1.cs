@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace AlgoritimoOrganizacao_Antoanne
 {
@@ -20,7 +21,12 @@ namespace AlgoritimoOrganizacao_Antoanne
         private void button1_Click(object sender, EventArgs e)
         {
             Algorithm alg = new Algorithm();
-            alg.AntoanneTask();
+            alg.AntoanneTask(chart1);
+        }
+
+        private void chart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
