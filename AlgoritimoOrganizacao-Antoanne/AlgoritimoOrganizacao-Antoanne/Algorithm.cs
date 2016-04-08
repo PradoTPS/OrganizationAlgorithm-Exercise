@@ -71,6 +71,46 @@ namespace AlgoritimoOrganizacao_Antoanne
 
             return Elements;
         }
+
+        private void LinearSearch(List<int> l, int i)
+        {
+            long elp;
+            stopwatch.Start();
+            for (int c = 0; c < l.Count; c++)
+            {
+                if (l[c] == i)
+                {
+                    elp = stopwatch.ElapsedMilliseconds;
+                    stopwatch.Stop();
+                    Console.WriteLine("Elemento: " + i + "Posição: " + c + ", " + "Tempo de busca: " + elp);
+                }
+                else if(c == l.Count)
+                {
+                    stopwatch.Stop();
+                    Console.WriteLine("Não encontrado!");
+                }
+            }
+        }
+
+        private void BinarySearch(List<int> l, int i)
+        {
+            long elp;
+            stopwatch.Start();
+            for (int c = 0; c < l.Count; c++)
+            {
+                if (l[c] == i)
+                {
+                    elp = stopwatch.ElapsedMilliseconds;
+                    stopwatch.Stop();
+                    Console.WriteLine("Elemento: " + i + "Posição: " + c + ", " + "Tempo de busca: " + elp);
+                }
+                else if (c == l.Count)
+                {
+                    stopwatch.Stop();
+                    Console.WriteLine("Não encontrado!");
+                }
+            }
+        }
         #endregion
 
         #region Antoanne Task
@@ -94,6 +134,7 @@ namespace AlgoritimoOrganizacao_Antoanne
 
             Console.WriteLine("Elementos da lista: " + ToString(nbrs));
             Console.WriteLine("Tempo em milisegundos de cada ordenação: " + ToString(elapseds));
+            LinearSearch(nbrs, random.Next(0,500));
         }
         #endregion
     }
