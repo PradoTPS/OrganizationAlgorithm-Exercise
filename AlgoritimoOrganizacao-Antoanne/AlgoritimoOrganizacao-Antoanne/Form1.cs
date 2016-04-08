@@ -23,10 +23,5 @@ namespace AlgoritimoOrganizacao_Antoanne
             Algorithm alg = new Algorithm();
             alg.AntoanneTask(chart1);
         }
-
-        private void chart_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
