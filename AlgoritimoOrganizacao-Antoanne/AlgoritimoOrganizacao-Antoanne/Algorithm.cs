@@ -30,6 +30,7 @@ namespace AlgoritimoOrganizacao_Antoanne
 
         private void BubbleSort(List<int> l)
         {
+            stopwatch = Stopwatch.StartNew();
             stopwatch.Start();
             int temp = 0;
             int nxt = 0;
@@ -46,8 +47,8 @@ namespace AlgoritimoOrganizacao_Antoanne
                     }
                 }
             }
-            stopwatch.Stop();
             elapsed = stopwatch.ElapsedMilliseconds;
+            stopwatch.Stop();
         }
 
         private string ToString(List<int> l)
@@ -75,6 +76,7 @@ namespace AlgoritimoOrganizacao_Antoanne
         private void LinearSearch(List<int> l, int i)
         {
             long elp;
+            stopwatch = Stopwatch.StartNew();
             stopwatch.Start();
             for (int c = 0; c < l.Count; c++)
             {
@@ -82,7 +84,8 @@ namespace AlgoritimoOrganizacao_Antoanne
                 {
                     elp = stopwatch.ElapsedMilliseconds;
                     stopwatch.Stop();
-                    Console.WriteLine("Elemento: " + i + "Posição: " + c + ", " + "Tempo de busca: " + elp);
+                    Console.WriteLine("----------LinearSearch----------");
+                    Console.WriteLine("Elemento: " + i + ", " + "Posição: " + c + ", " + "Tempo de busca: " + elp);
                 }
                 else if(c == l.Count)
                 {
@@ -94,20 +97,32 @@ namespace AlgoritimoOrganizacao_Antoanne
 
         private void BinarySearch(List<int> l, int i)
         {
+            Comparer<int> c = Comparer<int>.Default;
+            int lower = 0;
+            int upper = l.Count - 1;
             long elp;
+            stopwatch = Stopwatch.StartNew();
             stopwatch.Start();
-            for (int c = 0; c < l.Count; c++)
+            
+            while (lower <= upper)
             {
-                if (l[c] == i)
-                {
+                int middle = lower + (upper - lower) / 2;
+                int comparisonResult = c.Compare(i, l[middle]);
+
+                if (comparisonResult == 0){
                     elp = stopwatch.ElapsedMilliseconds;
                     stopwatch.Stop();
-                    Console.WriteLine("Elemento: " + i + "Posição: " + c + ", " + "Tempo de busca: " + elp);
+                    Console.WriteLine("----------BinarySearch----------");
+                    Console.WriteLine("Elemento: " + i + ", " + "Posição: " + middle + ", " + "Tempo de busca: " + elp);
+                    break;
                 }
-                else if (c == l.Count)
+                else if (comparisonResult < 0)
                 {
-                    stopwatch.Stop();
-                    Console.WriteLine("Não encontrado!");
+                    upper = middle - 1;
+                }
+                else
+                {
+                    lower = middle + 1;
                 }
             }
         }
@@ -134,7 +149,10 @@ namespace AlgoritimoOrganizacao_Antoanne
 
             Console.WriteLine("Elementos da lista: " + ToString(nbrs));
             Console.WriteLine("Tempo em milisegundos de cada ordenação: " + ToString(elapseds));
-            LinearSearch(nbrs, random.Next(0,500));
+
+            int r = random.Next(0, 500);
+            LinearSearch(nbrs, r);
+            BinarySearch(nbrs, r);
         }
         #endregion
     }
