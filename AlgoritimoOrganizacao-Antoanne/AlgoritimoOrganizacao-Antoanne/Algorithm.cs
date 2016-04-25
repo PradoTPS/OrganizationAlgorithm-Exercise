@@ -13,7 +13,6 @@ namespace AlgoritimoOrganizacao_Antoanne
     {
         #region Properties
         Random random = new Random();
-        Stopwatch stopwatch = new Stopwatch();
         private long elapsed;
         #endregion
 
@@ -30,7 +29,7 @@ namespace AlgoritimoOrganizacao_Antoanne
 
         private void BubbleSort(List<int> l)
         {
-            stopwatch = Stopwatch.StartNew();
+            Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             int temp = 0;
             int nxt = 0;
@@ -47,8 +46,8 @@ namespace AlgoritimoOrganizacao_Antoanne
                     }
                 }
             }
-            elapsed = stopwatch.ElapsedMilliseconds;
             stopwatch.Stop();
+            elapsed = stopwatch.ElapsedMilliseconds;
         }
 
         private string ToString(List<int> l)
@@ -76,20 +75,22 @@ namespace AlgoritimoOrganizacao_Antoanne
         private void LinearSearch(List<int> l, int i)
         {
             long elp;
-            stopwatch = Stopwatch.StartNew();
+            Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
+
             for (int c = 0; c < l.Count; c++)
             {
                 if (l[c] == i)
                 {
-                    elp = stopwatch.ElapsedMilliseconds;
                     stopwatch.Stop();
+                    elp = stopwatch.ElapsedMilliseconds;
                     Console.WriteLine("----------LinearSearch----------");
                     Console.WriteLine("Elemento: " + i + ", " + "Posição: " + c + ", " + "Tempo de busca: " + elp);
                 }
                 else if(c == l.Count)
                 {
                     stopwatch.Stop();
+                    elp = stopwatch.ElapsedMilliseconds;
                     Console.WriteLine("Não encontrado!");
                 }
             }
@@ -101,7 +102,7 @@ namespace AlgoritimoOrganizacao_Antoanne
             int lower = 0;
             int upper = l.Count - 1;
             long elp;
-            stopwatch = Stopwatch.StartNew();
+            Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             
             while (lower <= upper)
@@ -110,8 +111,8 @@ namespace AlgoritimoOrganizacao_Antoanne
                 int comparisonResult = c.Compare(i, l[middle]);
 
                 if (comparisonResult == 0){
-                    elp = stopwatch.ElapsedMilliseconds;
                     stopwatch.Stop();
+                    elp = stopwatch.ElapsedMilliseconds;
                     Console.WriteLine("----------BinarySearch----------");
                     Console.WriteLine("Elemento: " + i + ", " + "Posição: " + middle + ", " + "Tempo de busca: " + elp);
                     break;
